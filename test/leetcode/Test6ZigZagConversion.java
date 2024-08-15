@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package leetcode;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * 
+ */
+class Test6ZigZagConversion {
+
+	@Test
+	void testConvert() {
+		assertEquals("A", Problem6ZigZagConversion.convert("A", 1));
+		assertEquals("PAHNAPLSIIGYIR", Problem6ZigZagConversion.convert("PAYPALISHIRING", 3));
+		assertEquals(
+				"Aaidoeswr,haenme,rtesqecouishtabrateaeaietedrcinwtgnrlloacsoajsmnsoucutoadodiiesplnrmiaodprs,ubroohreunefnttacneedhsmwynihrieto,iheeaalwnefrdutettpntainnwrdvdr.", 
+				Problem6ZigZagConversion.convert("Apalindromeisaword,phrase,number,orothersequenceofunitsthatcanbereadthesamewayineitherdirection,withgeneralallowancesforadjustmentstopunctuationandworddividers.", 2));
+		assertEquals(
+				"ibgkxinzlgbjntwrvtlbmstfemisdnslpavokkovqphekfxiaijmaeugqcbtrvggvdxfnlcdajjnqgvqpedrizaabbtswbbteyatlcwnoiaeovvdbaxlzxlcygwwhzpnzpgkrfahmnmakmxbtyejghjzclzexltkqbiwgozbwfekxxompkcmycujybxiwwruzppwycpcswgqogkuazhnmwhmjrnhkypukfcmcviknytspzviegzbvuehylhstdibvoqfbdimexhjwjtywyxfwksrcoiinlctmugisesvpcofzfxizgmzlrqtkrbvhumhmcrakulcjlzdwaekukolddyyuvgpiruspzcxtnsepclskmjkcuhgjevnpdnacvbhiajpojfmeuikzyuesxudqcysrugtbmxumtgzfygviubmaifosstmtboxdmswkfapfneoedkhoacdenuxdgipvsubtltepvgexgcvebdajheljqdcoxbrczbmlqeewbvfpvcgdpuvxjucxvipoucpdqlfvvnnzlubtiaosd", 
+				Problem6ZigZagConversion.convert("ibgkxinzlgbjntwrvtlbmstfemisdnslpavokkovqphekfxiaijmaeugqcbtrvggvdxfnlcdajjnqgvqpedrizaabbtswbbteyatlcwnoiaeovvdbaxlzxlcygwwhzpnzpgkrfahnambyjhzlelkbwobfkxmkmcjbiwupwccwqguznwmrhyufmvkyszigbuhlsdbofdmxjjyyfkroiltuievcffigzrtrvuhcaucldakkldyvprszxnecsmkugendavhapjmukyexdcsutmutzyvumiosmbxmwfpnodhadnxgpsblevegvbahlqcxrzmqebfvgpvjcvpupqfvnlbiodsatuznvldcoixuxudcpvwelbcbodjejdecxgpttuviduecokeefaksdottsfabigfgmxbgryqusuziefojibcnpvjhcjklpstcpuiguydouewzjlkrmmhbkqlmzxzopssgmcnicswxwtwheibqvithyevzevptnicckpknjhmhakogspypzrwxyuycpoxewzgiqtxzcjgetxkmm", 343));
+	}
+}
