@@ -40,7 +40,7 @@ public class Problem15ThreeSum {
 		// Sort the array
 		java.util.Arrays.sort(nums);
 		int i = 0;
-		while (i < nums.length) {
+		while (i < nums.length - 2) {
 			int j = i + 1, k = nums.length - 1;
 			while (j < k) {
 				int sum = nums[i] + nums[j] + nums[k];
@@ -62,5 +62,4 @@ public class Problem15ThreeSum {
 		}
 		return new ArrayList<List<Integer>>(set);
     }
-	
 }
