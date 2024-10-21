@@ -35,7 +35,12 @@ public class Problem21MergeTwoSortedLists {
     	ListNode head2 = list2;
     	ListNode merged = new ListNode();
     	ListNode mergedHead = merged;
-    	while(head1 != null && head2 != null) {
+    	
+    	// If head1.next == null or head2.next == null, then break
+    	while (true) {
+    		if (head1 == null || head2 == null) {
+    			break;
+    		}
     		int lower = 0;
     		if (head1.val < head2.val) {
     			lower = head1.val;
@@ -45,22 +50,29 @@ public class Problem21MergeTwoSortedLists {
     			head2 = head2.next;
     		}
 			merged.val = lower;
-			merged.next = new ListNode();
-			merged = merged.next;
+			merged = merged.next = new ListNode();
     	}
     	// Insert if remaining in head1
-    	while (head1 != null) {
-			merged.val = head1.val;
-			merged.next = new ListNode();
-			merged = merged.next;
-			head1 = head1.next;
+    	if (head1 != null) {    		
+    		while (true) {
+    			merged.val = head1.val;
+    			head1 = head1.next;
+    			if (head1 == null) {
+    				break;
+    			}
+    			merged = merged.next = new ListNode();
+    		}
     	}
     	// Insert if remaining in head2
-    	while (head2 != null) {
-			merged.val = head2.val;
-			merged.next = new ListNode();
-			merged = merged.next;
-			head2 = head2.next;
+    	if (head2 != null) {
+    		while (true) {
+    			merged.val = head2.val;
+    			head2 = head2.next;
+    			if (head2 == null) {
+    				break;
+    			}
+    			merged = merged.next = new ListNode();
+    		}
     	}
         return mergedHead;
     }
