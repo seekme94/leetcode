@@ -24,7 +24,7 @@ public class Problem20ValidParentheses {
 		for (int i = 0; i < s.length(); i++) {
 			char ch = s.charAt(i);
 			// Return false if the character isn't a valid bracket
-			if (!isBrackerChar(ch)) {
+			if (!isBracketChar(ch)) {
 				return false;
 			}
 			// At any point, if the array size exceeds the remaining characters, then return false
@@ -49,7 +49,7 @@ public class Problem20ValidParentheses {
         return j == 0;
     }
 	
-	private static boolean isBrackerChar(char ch) {
+	private static boolean isBracketChar(char ch) {
 		return ch == '(' || ch == '{' || ch == '[' || ch == ')' || ch == '}' || ch == ']';
 	}
 }
