@@ -27,13 +27,23 @@ public class ListNode {
             current = current.next;
         }
     }
-
-	public void print() {
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("(");
+		sb.append(super.toString());
+		sb.append(") ");
 		ListNode temp = this;
 		while (temp != null) {
-			System.out.print(temp.val + "; ");
+			sb.append(temp.val);
+			sb.append(";");
 			temp = temp.next;
 		}
-		System.out.println();
+		return sb.toString();
+	}
+
+	public void print() {
+		System.out.println(toString());
 	}
 }

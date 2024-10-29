@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 /**
  * 
  */
-public class Test20ValidParentheses {
+class Test20ValidParentheses {
 	
 	@Test
 	void testEmpty() {

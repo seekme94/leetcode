@@ -5,9 +5,7 @@ package leetcode;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * 
@@ -93,7 +91,7 @@ public class Problem22GenerateParenthesis {
 		List<String> list = generateParenthesis(8);
 		int i = 1;
 		for (String str : list) {
-//			System.out.println(i++ + ": " + str);
+			System.out.println(i++ + ": " + str);
 		}
 		System.out.println(new Date().getTime() - start);
 	}
